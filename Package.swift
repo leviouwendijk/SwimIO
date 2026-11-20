@@ -12,10 +12,6 @@ let package = Package(
             name: "SwimIO",
             targets: ["SwimIO"]
         ),
-        .executable(
-            name: "swimiotest",
-            targets: ["SwimIOTestFlows"]
-        ),
     ],
     dependencies: [
         .package(
@@ -50,20 +46,6 @@ let package = Package(
                 .product(
                     name: "Readers",
                     package: "Readers"
-                ),
-                .product(
-                    name: "Writers",
-                    package: "Writers"
-                ),
-            ]
-        ),
-        .executableTarget(
-            name: "SwimIOTestFlows",
-            dependencies: [
-                "SwimIO",
-                .product(
-                    name: "IO",
-                    package: "IO"
                 ),
                 .product(
                     name: "Writers",
